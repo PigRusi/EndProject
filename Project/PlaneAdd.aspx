@@ -9,7 +9,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:DropDownList ID="PlaneList" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="PlaneList" runat="server"></asp:DropDownList>or
+            <asp:TextBox ID="NewPlane" runat="server"></asp:TextBox><br /><br />
 
             <asp:TextBox ID="Quantity" runat="server"></asp:TextBox>
 

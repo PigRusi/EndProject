@@ -11,7 +11,7 @@ namespace Project
 {
 
 
-    public partial class PlaneAdd
+    public partial class PurchasePlane
     {
 
         /// <summary>
@@ -33,22 +33,31 @@ namespace Project
         protected global::System.Web.UI.WebControls.DropDownList PlaneList;
 
         /// <summary>
-        /// NewPlane control.
+        /// Destenation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NewPlane;
+        protected global::System.Web.UI.WebControls.TextBox Destenation;
 
         /// <summary>
-        /// Quantity control.
+        /// DepartureDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Quantity;
+        protected global::System.Web.UI.WebControls.TextBox DepartureDate;
+
+        /// <summary>
+        /// RerturnDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox RerturnDate;
 
         /// <summary>
         /// Submit control.

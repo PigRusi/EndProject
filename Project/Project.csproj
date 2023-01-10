@@ -82,9 +82,13 @@
   <ItemGroup>
     <Content Include="DeleteUser.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
     <Content Include="PlaneAdd.aspx" />
+    <Content Include="PurchasePlane.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="Select.aspx" />
+    <Content Include="ShowPilots.aspx" />
+    <Content Include="ShowRes.aspx" />
     <Content Include="UpdateUser.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -100,6 +104,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PlaneAdd.aspx.cs">
       <DependentUpon>PlaneAdd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -108,6 +119,13 @@
       <DependentUpon>PlaneAdd.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchasePlane.aspx.cs">
+      <DependentUpon>PurchasePlane.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchasePlane.aspx.designer.cs">
+      <DependentUpon>PurchasePlane.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -121,6 +139,20 @@
     </Compile>
     <Compile Include="Select.aspx.designer.cs">
       <DependentUpon>Select.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowPilots.aspx.cs">
+      <DependentUpon>ShowPilots.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowPilots.aspx.designer.cs">
+      <DependentUpon>ShowPilots.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowRes.aspx.cs">
+      <DependentUpon>ShowRes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowRes.aspx.designer.cs">
+      <DependentUpon>ShowRes.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpdateUser.aspx.cs">
       <DependentUpon>UpdateUser.aspx</DependentUpon>

@@ -11,7 +11,7 @@ namespace Project
 {
 
 
-    public partial class PlaneAdd
+    public partial class Login
     {
 
         /// <summary>
@@ -24,39 +24,39 @@ namespace Project
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// PlaneList control.
+        /// WhatTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PlaneList;
+        protected global::System.Web.UI.WebControls.DropDownList WhatTable;
 
         /// <summary>
-        /// NewPlane control.
+        /// Id1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NewPlane;
+        protected global::System.Web.UI.WebControls.TextBox Id1;
 
         /// <summary>
-        /// Quantity control.
+        /// Pass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Quantity;
+        protected global::System.Web.UI.WebControls.TextBox Pass;
 
         /// <summary>
-        /// Submit control.
+        /// LoginBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Submit;
+        protected global::System.Web.UI.WebControls.Button LoginBtn;
     }
 }

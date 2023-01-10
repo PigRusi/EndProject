@@ -43,29 +43,43 @@ namespace Project
 
         protected void Submit_Click(object sender, EventArgs e)
         {
-            try
+            OleDbConnection conObj = new OleDbConnection();
+            conObj.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data source=" + Server.MapPath("") + "\\DataBase.accdb";
+
+            OleDbCommand cmdObj;
+            int quantity;
+                string cmdStr = "";
+            if (PlaneList.SelectedIndex == 0)
             {
-                OleDbConnection conObj = new OleDbConnection();
-                conObj.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data source=" + Server.MapPath("") + "\\DataBase.accdb";
-
-
-
-
-                string cmdStr = $"INSERT INTO planes (Plane, Quantity) VALUES ('{PlaneList.SelectedValue}', '{Quantity}')";
-
-
-
-
-
+                quantity = int.Parse(Quantity.Text);
+                cmdStr = $"INSERT INTO planes (Plane, Quantity) VALUES ('{NewPlane.Text}', '{quantity}')";
                 conObj.Open();
-                OleDbCommand cmdObj = new OleDbCommand(cmdStr, conObj);
+                cmdObj = new OleDbCommand(cmdStr, conObj);
                 cmdObj.ExecuteNonQuery();
+
                 Response.Write("Succeed");
                 conObj.Close();
             }
-            catch (Exception ex)
+
+            else
             {
-                Response.Write(ex.Message);
+                cmdStr = $"SELECT Quantity FROM planes WHERE Plane='{PlaneList.SelectedValue}'";
+
+                conObj.Open();
+                cmdObj = new OleDbCommand(cmdStr, conObj);
+                OleDbDataReader Dr = cmdObj.ExecuteReader();
+                Dr.Read();
+                int x = int.Parse(Dr["Quantity"].ToString());
+                quantity = int.Parse(Quantity.Text);
+                conObj.Close();
+
+
+                cmdStr = $"UPDATE planes SET Quantity='{x + quantity}' WHERE Plane='{PlaneList.SelectedValue}'";
+                conObj.Open();
+                cmdObj = new OleDbCommand(cmdStr, conObj);
+                cmdObj.ExecuteNonQuery();
+                Response.Write("Succeed");
+                conObj.Close();
             }
         }
     }
